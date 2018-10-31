@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row" *ngIf="formShow">
+    
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+      <img [src]="imgPreview" (error)="onImgPreviewError()" class="img-preview"/>
+      <!-- <button class="btn btn-warning btn-block" (click)="toggleForm()">Edit profile</button> -->
+      <i class="fa fa-arrow-left" (click)="toggleForm()" style="cursor: pointer;"></i>
+    </div>
+    
+    <div class="col-md-8 col-xs-12">
+      <form (ngSubmit)="onSubmitForm(user)" #form="ngForm">
+        <div class="form-group">
+          <div class="input-group mb-1">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-file-o"></i></span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" required #userFile name="photos" (change)="onChangeImageFile(userFile)" required>
+              <label class="custom-file-label">Choose your profile image</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="usr">Name:</label>
+          <input type="text" class="form-control" name="name" placeholder="Edit your name" [(ngModel)]="user.name" #name="ngModel" required>
+        </div>
+        <div class="form-group">
+          <label for="usr">Description:</label>
+          <input type="text" class="form-control" name="name" placeholder="Edit your name" [(ngModel)]="user.description" #name="ngModel" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-block" [disabled]="!form.valid">Update profile</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div *ngIf="profileShow" class="row">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 padding-0">
+      <div class="relative">
+        <img [src]="user.image" class="profileImage" alt="image">
+      </div>
+      <div class="absolute edit">
+        <a (click)="toggleForm()" style="cursor: pointer;">Edit profile</a>
+      </div>
+    </div>
+    <div class="col-xs-12 margin-left">
+      <p>Name: <span> {{user.name}}</span></p>
+      <p>Description: {{user.description}}</p>
+    </div>
+  </div>
+</div>

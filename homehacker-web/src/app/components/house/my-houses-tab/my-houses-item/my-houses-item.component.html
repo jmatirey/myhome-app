@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin-bottom">
+      <div class="relative">
+        <img class="card-img-top houseImage" [src]="housePerUser.photos[0]" alt="Card image cap" [routerLink]="['/houses', housePerUser.id]" style="cursor: pointer;">
+        <i class="fa fa-trash" (click)="onClickRemoveHouse(housePerUser.id)" aria-hidden="true" style="cursor: pointer"></i>
+      </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 align-text">
+      <h5 class="card-title">{{housePerUser.address}}</h5>
+      <p class="card-text bold">{{housePerUser.price}}€ per night</p>
+      <p class="card-text">{{housePerUser.start | date}} - {{housePerUser.end | date}}</p>
+      <div *ngIf="housePerUser.bookings.length > 0; else other_content">
+        <div class="row margin-bottom" *ngFor="let tenant of housePerUser.bookings">
+          <img [src]="tenant.user.image" alt="image" class="circleImage"> 
+          <p class="inline margin">{{tenant.user.name}}</p>
+          <strong [routerLink]="['/chat', tenant.user.id, 'messages']" style="cursor: pointer;">Contact tenant: {{tenant.user.name}}</strong>
+          <small class="bold"> <i class="fa fa-ticket" aria-hidden="true"></i>{{tenant.start | date}} - {{tenant.end | date}}</small>
+        </div>
+      </div>
+      <ng-template #other_content>
+        <div class="alert alert-warning" role="alert">
+          <strong>No tenants yet {{housePerUser.owner.name}}</strong>
+        </div>
+      </ng-template>
+      
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 border-radius">
+      
+      <agm-map [zoom]="15" [longitude]="housePerUser.location[0]" [latitude]="housePerUser.location[1]">
+        <agm-marker [longitude]="housePerUser.location[0]" [latitude]="housePerUser.location[1]"></agm-marker>
+      </agm-map>
+      
+    </div>
+    
+  </div>
+</div>

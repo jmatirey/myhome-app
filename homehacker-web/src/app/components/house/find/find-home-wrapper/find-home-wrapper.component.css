@@ -1,0 +1,14 @@
+.btn{
+    margin: 10px auto;
+    width: 200px;
+
+}
+
+.fa-cogs{
+    font-size: 30px;
+}
+
+.align-cogs{
+    display: block;
+    text-align: center;
+}

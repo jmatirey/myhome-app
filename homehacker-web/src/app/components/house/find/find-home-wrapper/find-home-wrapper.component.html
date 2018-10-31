@@ -1,0 +1,7 @@
+<div class="row align-cogs">
+    <!-- <button class="btn btn-warning" (click)="findHouseToggle()">Filter</button> -->
+    <i class="fa fa-cogs" (click)="findHouseToggle()" style="cursor: pointer;"></i>
+</div>
+<div class="row">
+    <app-find-home-form (houseFindSubmit)=onSubmitFindHouse($event) [apiError]="apiError" *ngIf="toggleForm" style="width:100%"></app-find-home-form>
+</div>

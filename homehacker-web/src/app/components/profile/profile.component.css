@@ -1,0 +1,51 @@
+span{
+    font-weight: 800;
+}
+
+.image{
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.btn{
+    margin-bottom: 30px;
+}
+
+.img-preview{
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.profileImage{
+    width: 100%;
+}
+
+.relative{
+    position: relative;
+}
+
+.padding-0{
+    padding: 0;
+}
+
+.absolute{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.edit{
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 900;
+}
+
+.margin-left{
+    margin-left: 20px;
+}
+
+.fa{
+    font-size: 30px;
+}

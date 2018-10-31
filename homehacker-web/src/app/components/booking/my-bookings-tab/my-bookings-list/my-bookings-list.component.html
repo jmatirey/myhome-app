@@ -1,0 +1,14 @@
+<div *ngIf="bookings.length > 0; else othercontent">
+    <div class="col-12 margin wrapper" *ngFor="let booking of bookings">
+        <hr>
+        <app-my-bookings-item [booking]="booking"></app-my-bookings-item>
+    </div>
+</div>
+
+<ng-template #othercontent>
+    <div class="alert alert-danger" role="alert">
+        <strong>You dont have any bookings yet</strong>
+    </div>
+    
+
+</ng-template>

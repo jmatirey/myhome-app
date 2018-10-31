@@ -1,0 +1,35 @@
+.messages{
+    height: 78vh;
+    overflow: scroll;
+}
+
+.messages{
+    padding: 5px;
+}
+
+.button{
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.icon-send{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.round{
+    border-top-right-radius: 24px !important;
+    border-bottom-right-radius: 24px !important;
+    border-top-left-radius: 24px !important;
+    border-bottom-left-radius: 24px !important;
+}
+
+.fixed{
+    /* height: 80px; */
+    /* position: fixed;
+    bottom: 10px;
+    width: 80%; */
+}

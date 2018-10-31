@@ -1,0 +1,60 @@
+
+.container{
+    padding: 20px;
+}
+.bold{
+    font-weight: 900;
+}
+
+agm-map {
+    height: 300px;
+}
+
+.button{
+    margin: 7px;
+    width: 200px;
+}
+
+.detailsButton{
+    margin: 5px auto;
+    display: block;
+}
+
+.block{
+    display: block;
+    width: 100%;
+}
+
+.house-image{
+    border-radius: 10px;
+}
+.relative{
+    position: relative;
+}
+
+.owner-image{
+    width: 50px;
+    /* height: 60px; */
+    /* border-radius: 100%; */
+}
+
+.center{
+    text-align: center;
+}
+
+.center-button{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.margin{
+    display: block;
+    margin:  0 auto 10px auto;
+    text-align: center;
+}
+
+.fa-envelope{
+    /* color: white; */
+    font-size: 100px;
+}

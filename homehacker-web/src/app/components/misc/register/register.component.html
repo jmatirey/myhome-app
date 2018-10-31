@@ -1,0 +1,12 @@
+<div class="cont">
+  <div class="form">
+    <form (ngSubmit)="onSubmitRegister()" #registerForm="ngForm">
+      <h1>Register</h1>
+      <input type="email" email required #email="ngModel" class="email" placeholder="Email" [(ngModel)]="user.email" name="email"/>
+      <input type="password" password required #password="ngModel" class="password" placeholder="Password" [(ngModel)]="user.password" name="password"/>
+      <small style="color:red;" *ngIf="apiError">{{apiError.message}}</small>
+      <button class="login" type="submit" [disabled]=!registerForm.valid>Register</button>
+    </form>
+    <a [routerLink]="['/login']">Have an account?</a>
+  </div>
+</div>

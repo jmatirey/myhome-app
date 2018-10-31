@@ -1,0 +1,13 @@
+<div class="cont">
+  
+  <div class="form">
+    <form (ngSubmit)="onSubmitLogin()" #loginForm="ngForm">
+      <h1>Login</h1>
+      <input type="email" email required class="email" placeholder="Email" [(ngModel)]="user.email" required name="user.email"/>
+      <input type="password" password required class="password" placeholder="Password" [(ngModel)]="user.password" required name="user.password"/>
+       <small style="color:red;" *ngIf="apiError">{{apiError.message}}</small>
+      <button class="login" [disabled]="!loginForm.valid">Login</button>
+    </form>
+    <a [routerLink]="['/register']">Dont have an account?</a>
+  </div>
+</div>

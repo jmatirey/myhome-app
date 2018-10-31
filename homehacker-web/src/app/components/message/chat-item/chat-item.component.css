@@ -1,0 +1,45 @@
+
+
+.message{
+    padding: 5px 10px 10px 10px;
+    border-radius: 8px 8px 8px 8px;
+    max-width: 60vw;
+    margin: 10px 0 10px 0;
+} 
+
+.alert-primary{
+    float: left;
+}
+
+.alert-success{
+    float: right;
+}
+
+.content > p{
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.profile-image{
+    width: 40px;
+    border-radius: 4px 4px 4px 4px;
+    margin-right: 5px;
+}
+
+.imageDelete{
+    margin-left: 20;
+    float: right;
+    width: 10px;
+}
+
+
+/* .message:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    border-top: 9px solid rgb(206, 234, 213);
+    border-top-color: inherit;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+}   */

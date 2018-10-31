@@ -1,0 +1,43 @@
+<!-- 
+  <div *ngIf="user">
+    <nav class="navbar navbar-dark bg-primary">
+      <div [ngbCollapse]="!isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown" [routerLink]="['/home']">Home</a>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown" [routerLink]="['/createHouse']">Publish house</a>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown" [routerLink]="['/myHouses']">My houses</a>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown" [routerLink]="['/myBookings']">My bookings</a>
+          </li>
+          <li class="nav-item dropdown" ngbDropdown>
+            <a class="nav-link dropdown" ngbDropdownToggle>Settings</a>
+            <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
+              <a class="dropdown-item" [routerLink]="['/profile']">Your profile</a>
+              <a class="dropdown-item" (click)="onClickLogOut()">Logout</a>
+            </div>
+          </li>
+          <small>{{user.email}}</small>
+        </ul>
+      </div>
+      <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div> -->
+  
+  <div *ngIf='user'>
+    <nav class="navbar">
+      <a [routerLink]="['/home']"><i class="fa fa-home"></i></a>
+      <a [routerLink]="['/createHouse']"><i class="fa fa-plus"></i></a>
+      <a [routerLink]="['/myHouses']"><i class="fa fa-building"></i></a>
+      <a [routerLink]="['/myBookings']"><i class="fa fa-book"></i></a>
+      <a [routerLink]="['/profile']"><i class="fa fa-user"></i></a>
+      <a (click)="onClickLogOut()" style="cursor: pointer;"><i class="fa fa-power-off"></i></a>
+    </nav>
+  </div>

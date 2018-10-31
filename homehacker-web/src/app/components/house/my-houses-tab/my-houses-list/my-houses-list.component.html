@@ -1,0 +1,13 @@
+<div *ngIf="housesPerUser.length > 0; else othercontent">
+    <div class="col-12" *ngFor="let housePerUser of housesPerUser">
+        <app-my-houses-item [housePerUser]="housePerUser"></app-my-houses-item>
+        <hr>
+    </div>
+</div>
+
+
+<ng-template #othercontent>
+    <div class="alert alert-danger" role="alert">
+        <strong>You dont have any houses yet</strong>
+    </div>
+</ng-template>

@@ -1,0 +1,49 @@
+/* .navbar{
+    margin-bottom: 20px;
+}
+
+.nav-link .dropdown{
+    float: right;
+} */
+
+/* .mat-tab-nav-bar ::ng-deep .mat-tab-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navMolona {
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    z-index: 1;
+    width: 100%;
+    border-top: 1px solid black;
+    position: fixed;
+} */
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 60px;
+    border-top: 3px solid rgba(0,0,0, 0.3);
+    z-index: 1;
+    background-color: white;
+}
+
+.fa{
+    font-size: 30px;
+    color: grey;
+}
+
+.fa:hover{
+    color: black;
+}

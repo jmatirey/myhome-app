@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row mb-5">
+    <div class="col-12">
+    
+<form (ngSubmit)="onSubmitCreateHouse()" #formHouseCreate="ngForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">House name</label>
+      <input type="text" class="form-control" placeholder="Name" name="name" [(ngModel)]="house.name" #name="ngModel" required>
+      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Description</label>
+      <input type="text" class="form-control" placeholder="Description" name="description" [(ngModel)]="house.description" #name="ngModel" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Search for Location</label>
+      <input type="text" placeholder="Search for Location" autocorrect="off" autocapitalize="off" spellcheck="off" class="form-control" #search>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">How many people</label>
+      <select [(ngModel)]="house.people" name="people" class="form-control" required #people="ngModel">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" selected>4</option>
+        <option value="5" selected>5</option>
+        <option value="6" selected>6</option>
+        <option value="7" selected>7</option>
+        <option value="8" selected>8</option>
+        <option value="9" selected>9</option>
+      </select>        
+    </div>
+    
+    
+    
+    <div class="form-group">
+      <label for="Amenities">Amenities</label>
+      <div class="input-group"> 
+        <input type="text" class="form-control" placeholder="Amenity" name="amenity" #amenity required>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="onClickAddAmenity(amenity)"><i class="fa fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group" *ngFor="let amenity of house.amenities">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Amenities" name="amenities" [value]="amenity" readonly>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="onClickRemoveAmenity(amenity)"><i class="fa fa-minus"></i></button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="exampleInputPassword1">Price tag</label>
+      <input type="text" class="form-control" placeholder="Price tag" name="price" [(ngModel)]="house.price" #price="ngModel" required>
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="exampleInputPassword1">From</label>
+      <input type="text" class="form-control" placeholder="From" name="start" [(ngModel)]="house.start" #start="ngModel" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">To</label>
+      <input type="text" class="form-control" placeholder="To" name="end" [(ngModel)]="house.end" #start="ngModel" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()" required>
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="exampleInputPassword1">Upload photo</label>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" required #houseFiles name="photos" (change)="onChangeImageFile(houseFiles)" multiple required>
+        <label class="custom-file-label">Choose a file</label>
+      </div>
+    </div>
+    
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary btn-block" [disabled]="!formHouseCreate.valid">Create house</button>
+    </div>
+  </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="row mt-3 mb-1">
+        <div *ngFor="let previewImage of previewImages">
+          <img class="card-img-top img-thumbnail" [src]="previewImage" style="width: 10rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="house.location">
+    <agm-map [zoom]="15" [longitude]="house.location[0]" [latitude]="house.location[1]">
+      <agm-marker [longitude]="house.location[0]" [latitude]="house.location[1]"></agm-marker>
+    </agm-map>
+  </div>
+</div>

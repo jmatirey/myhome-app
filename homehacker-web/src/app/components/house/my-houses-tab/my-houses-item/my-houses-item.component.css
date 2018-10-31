@@ -1,0 +1,89 @@
+
+.container{
+    padding: 20px;
+}
+.bold{
+    font-weight: 900;
+}
+
+agm-map {
+    height: 300px;
+}
+
+.button{
+    margin: 7px;
+    width: 200px;
+}
+
+.detailsButton{
+    margin: 5px auto;
+    display: block;
+}
+
+.circleImage{
+    border-radius: 100%; 
+    height: 50px;
+    margin-right: 5px;
+}
+
+.inline{
+    display: inline;
+}
+
+.margin{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.margin-bottom{
+    margin-bottom: 10px;
+}
+
+.extra-margin{
+    margin: 10px;
+}
+
+.center{
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 90%;
+    margin-top: 10px; 
+}
+
+.bold{
+    font-weight: 800;
+}
+
+.fa-ticket{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.fa-trash{
+    font-size: 30px; 
+    position: absolute;
+    color: white;
+    margin: 10px;
+    left: 0;
+}
+
+.relative{
+    position: relative;
+    left: 0;
+}
+
+.align-text{
+    text-align: center;
+}
+
+.houseImage{
+    border-radius: 5px;
+}
+
+.margin-bottom{
+    margin-bottom: 20px;
+}
+
+.alert-warning{
+    text-align: center;
+}

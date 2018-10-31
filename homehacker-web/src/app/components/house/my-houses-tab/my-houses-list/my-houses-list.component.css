@@ -1,0 +1,15 @@
+
+hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.alert{
+    margin: 50px;
+    padding: 30px;
+}
+
+strong{
+    text-align: center;
+    display: block;
+}

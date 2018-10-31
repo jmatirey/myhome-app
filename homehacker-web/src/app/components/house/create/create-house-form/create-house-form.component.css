@@ -1,0 +1,21 @@
+
+h1, h2, .buttonStyled, .password{ 
+  text-align: center;
+  display: block;
+}
+
+h1{
+  color: #606060;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 30px auto;
+}
+
+
+agm-map {
+  height: 200px;
+}
+
+.mb-1{
+  /* margin-bottom: 1rem!important; */
+}

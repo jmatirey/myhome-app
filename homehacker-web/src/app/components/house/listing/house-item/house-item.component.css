@@ -1,0 +1,27 @@
+
+.container{
+    padding: 20px;
+}
+
+.extraMargin{
+    margin-bottom: 30px;
+}
+
+*:not(strong){
+    /* font-weight: 100; */
+}
+
+
+.owner-image{
+    width: 50px;
+    height: 35px;
+    border-radius:5px; 
+}
+
+.house{
+    margin-bottom: 30px;
+}
+
+.house-photo{
+    padding: 0;
+}

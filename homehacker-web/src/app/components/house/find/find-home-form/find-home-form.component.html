@@ -1,0 +1,47 @@
+<form (ngSubmit)="onSubmitFindHouse()" #formHouseFind="ngForm">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-6">
+        <label for="exampleInputPassword1">Location</label>
+        <input type="text" class="form-control" placeholder="Location" name="location" #search>
+        
+      </div>
+      
+      <div class="col-6" style="padding-top:26px;">
+        <div style="width: 100%">
+          <input style="width:100%;" type="range" name="range" min="1" max="100" value="5" class="slider" id="myRange" [(ngModel)]="house.range">  
+          <small style="text-align:center; display:block;" *ngIf="house.range">{{house.range}} km</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">How many people</label>
+    <select [(ngModel)]="house.people" name="people" class="form-control" required #people="ngModel">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4" selected>4</option>
+      <option value="5" selected>5</option>
+      <option value="6" selected>6</option>
+      <option value="7" selected>7</option>
+      <option value="8" selected>8</option>
+      <option value="9" selected>9</option>
+    </select>        
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputPassword1">From</label>
+    <input type="text" class="form-control" placeholder="From" name="start" [(ngModel)]="house.start" #start="ngModel" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">To</label>
+    <input type="text" class="form-control" placeholder="To" name="end" [(ngModel)]="house.end" #start="ngModel" ngbDatepicker #d2="ngbDatepicker" (click)="d2.toggle()" required>
+  </div>
+  
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="!formHouseFind.valid">Find</button>
+  </div>
+</form>
+
+{{house | json}}

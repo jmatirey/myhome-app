@@ -1,0 +1,46 @@
+.image{
+    height: 20vh;
+    margin: 0 auto;
+    background: no-repeat fixed center / cover;
+    
+}
+/* .container-fluid{
+    padding-left: 200px;
+    padding-right: 200px;
+} */
+
+.row{
+    margin: 20px;
+}
+
+.houseTitle{
+    text-align: center;
+}
+
+.py-5{
+    padding-bottom: 1rem!important;
+    padding-top: 1rem!important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 60px;
+    height: 60px;
+}
+
+agm-map {
+    height: 300px;
+}
+
+*:not(strong){
+    /* font-weight: 100; */
+}
+
+.owner-image{
+    width: 50px;
+    border-radius:5px; 
+    margin-right: 10px;
+}
+
+.description{
+    font-size: 13px;
+}
